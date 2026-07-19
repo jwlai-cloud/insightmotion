@@ -1,0 +1,29 @@
+{
+  "_comment": "SIMULATED DATA ONLY — created for the InsightMotion OpenAI Build Week demo; not a real retailer or sales result.",
+  "scenario": "retail-q2-2026",
+  "quarter": "Q2 2026",
+  "currency": "USD",
+  "regions": [
+    {
+      "id": "west",
+      "label": "West",
+      "sales": 82000,
+      "target": 95000,
+      "category_breakdown": { "Electronics": 30000, "Home": 27000, "Apparel": 25000 }
+    },
+    {
+      "id": "east",
+      "label": "East",
+      "sales": 98000,
+      "target": 90000,
+      "category_breakdown": { "Electronics": 42000, "Home": 31000, "Apparel": 25000 }
+    },
+    {
+      "id": "central",
+      "label": "Central",
+      "sales": 91000,
+      "target": 90000,
+      "category_breakdown": { "Electronics": 34000, "Home": 29000, "Apparel": 28000 }
+    }
+  ]
+}
