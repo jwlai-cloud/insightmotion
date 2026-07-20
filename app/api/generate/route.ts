@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
-import { hasDemoAccess, isPreviewDemoBypassEnabled } from "@/lib/demo-session";
+import { hasDemoAccess, isDemoAccessBypassEnabled } from "@/lib/demo-session";
 import { dataFor, isHighlightForScenario, isScenarioId } from "@/lib/retail-data";
 
 export const runtime = "nodejs";
@@ -50,7 +50,7 @@ Build polished compact scene from primitive geometry only. MANDATORY: label ever
 }
 
 export async function POST(request: Request) {
-  if (!isPreviewDemoBypassEnabled() && !(await hasDemoAccess())) return NextResponse.json({ error: "Demo access required." }, { status: 401 });
+  if (!isDemoAccessBypassEnabled() && !(await hasDemoAccess())) return NextResponse.json({ error: "Demo access required." }, { status: 401 });
   if (!process.env.OPENAI_API_KEY) return NextResponse.json({ error: "OPENAI_API_KEY is not configured." }, { status: 500 });
 
   const body = await request.json().catch(() => null) as GenerateRequest | null;

@@ -126,7 +126,7 @@ an account system.
   `process.env.DEMO_SESSION_SECRET`; no database, account record, or auth
   provider is used.
 - The UI describes this only as “Demo access,” never as full authentication.
-- Temporary Preview capture bypass: setting `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` skips the judge-code cookie only when Vercel sets `VERCEL_ENV=preview`. Production cannot use this bypass; GPT generation still requires `OPENAI_API_KEY`.
+- Temporary capture bypasses: `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` remains Preview-only. `DEMO_ACCESS_BYPASS=true` skips the judge-code cookie in any environment for a short recording window; remove it or set it to `false` immediately after capture. GPT generation still requires `OPENAI_API_KEY`.
 
 ### File layout
 
