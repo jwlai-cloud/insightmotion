@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type MutableRefObject } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import anime from "animejs";
 
 export type StageController = { run: (code: string) => void };
@@ -20,6 +21,8 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
     camera.position.set(0, 1.7, 6.3);
     camera.lookAt(0, 0.5, 0);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0, 0.5, 0); controls.enableDamping = true; controls.dampingFactor = 0.06; controls.minDistance = 2.5; controls.maxDistance = 14; controls.update();
     const clock = new THREE.Clock();
     let sceneUpdate: ((seconds: number) => void) | null = null;
 
@@ -49,6 +52,7 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
       if (sceneUpdate) {
         try { sceneUpdate(clock.getElapsedTime()); } catch { /* preserve visible scene on animation error */ }
       }
+      controls.update();
       renderer.render(scene, camera);
     };
     loop();
@@ -66,6 +70,7 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
       cancelAnimationFrame(frame);
       observer.disconnect();
       controllerRef.current = null;
+      controls.dispose();
       renderer.dispose();
       renderer.domElement.remove();
     };

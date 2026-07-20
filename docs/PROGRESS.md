@@ -12,6 +12,7 @@
   metadata, AI finding, visual direction, and generated-code disclosure.
 - Added signed demo access cookie and verified locally.
 - `npm run build` passes on 2026-07-19.
+- Added optional ephemeral CSV upload (200 rows, 20 columns; no persistence), Preview capture bypass, visible generation trace, and direct 3D orbit/zoom/pan controls.
 - Added Devpost story, Mermaid architecture/topology/sequence diagrams, and
   exact 180-second demo script + recording/edit runbook.
 
