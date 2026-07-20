@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Capture the browser shots from the 180-second runbook, trim each to the exact
+# Capture the browser shots from the 2:58 runbook, trim each to the exact
 # listed duration, and save them under video/raw/. Large source/export/audio
 # files are intentionally gitignored.
 # Required raw clips: 02-context, 03-question, 04-generation, 05-reveal,
@@ -29,7 +29,7 @@ card() {
 
 card video/cards/01-title.mp4 15 "A CSV is not a decision." "InsightMotion turns questions into live, AI-directed 3D briefs."
 card video/cards/10-proof.mp4 15 "2 scenarios · 104 matches · 4 views" "200-row CSV input · visible live generation · up to 3 scene repairs"
-card video/cards/11-close.mp4 11 "Ask data. Let GPT direct attention." "insightmotion-git-dev-jwlaiclouds-projects.vercel.app  ·  github.com/jwlai-cloud/insightmotion"
+card video/cards/11-close.mp4 9 "Ask data. Let GPT direct attention." "insightmotion.vercel.app  ·  github.com/jwlai-cloud/insightmotion"
 
 for name in 02-context 03-question 04-generation 05-reveal 06-controls 07-code-proof 08-second-question 09-architecture; do
   case "$name" in
@@ -61,6 +61,6 @@ EOF
 
 ffmpeg -y -f concat -safe 0 -i video/normalized/concat.txt -i video/audio/insightmotion-voiceover-180.m4a \
   -vf "subtitles=video/subtitles/insightmotion.en.srt:force_style='FontName=Arial,FontSize=22,PrimaryColour=&H00FFFFFF,OutlineColour=&H00111E2B,BorderStyle=1,Outline=2,Shadow=0,MarginV=56'" \
-  -map 0:v:0 -map 1:a:0 -t 180 -c:v libx264 -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart video/exports/insightmotion-demo-1080p.mp4
+  -map 0:v:0 -map 1:a:0 -t 178 -c:v libx264 -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart video/exports/insightmotion-demo-1080p.mp4
 
 ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 video/exports/insightmotion-demo-1080p.mp4

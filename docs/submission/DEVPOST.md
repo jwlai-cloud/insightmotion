@@ -110,6 +110,6 @@ three.js, anime.js.
 
 ## Try it out
 
-- Live Preview: https://insightmotion-git-dev-jwlaiclouds-projects.vercel.app/
+- Live demo: https://insightmotion.vercel.app/
 - Source: https://github.com/jwlai-cloud/insightmotion
-- Demo video: add the final unlisted video URL after export.
+- Demo video: add the final **public YouTube** URL before submitting.

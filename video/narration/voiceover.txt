@@ -1,10 +1,10 @@
 A team receives a CSV, chooses a chart, and still has to explain where everyone should look. That explanation is usually a stale screenshot. InsightMotion changes the deliverable itself. It turns a business question into a live, AI-directed 3D decision brief.
 
-For this demo we begin with simulated aggregate World Cup operations data: one hundred and four matches, no individual users, and no betting advice. We use prepared data for a reliable walkthrough, but an analyst can also upload a temporary CSV of up to two hundred rows. It is used only for the current request and is never stored.
+This demo uses simulated aggregate World Cup operations data: one hundred and four matches, no individual users, and no betting advice. Analysts can also upload a temporary CSV, up to two hundred rows, used only for the current request.
 
 I select global regions and ask a normal question: which region drove post-tournament growth? Notice what I do not do: I never choose a chart.
 
-When I click Generate, the visible pipeline shows the work in order. First, GPT five point six Terra analyzes the current data. Next, it writes the finding, a public visual direction, and executable three.js and anime.js code. Then the browser runs that code as a live scene. We cut the waiting time here for pacing, but we do not pretend the model answered instantly.
+Codex accelerated the build from a tested prototype into this Next.js app, scene runtime, and repair loop. When I click Generate, GPT five point six Terra analyzes the current data, writes a finding, public visual direction, and runnable three.js and anime.js code. The browser runs that code as a live scene. We cut waiting for pacing, not to fake speed.
 
 The result is not a chart image. It is a labeled scene. The numeric labels preserve the evidence. The camera push, gold focus, and pulse answer a more useful question than a dashboard can: where should the team look first? And after the directed reveal, a teammate can orbit, zoom, and pan to inspect the scene themselves.
 
@@ -12,4 +12,4 @@ The timestamp, public visual direction, and generated-code disclosure make the l
 
 Under the hood, one Vercel app keeps the OpenAI key server-side. Temporary CSV input is never persisted. The browser executes a constrained visual contract, and if generated code fails at runtime, InsightMotion sends the error and prior code back for up to three repairs.
 
-In one deployable MVP, we built two business scenarios, four World Cup views, bounded CSV input, visible live generation, and an attention-directed 3D brief. InsightMotion: ask data, let GPT direct attention, and share a decision, not a stale screenshot.
+In one deployable MVP, we built two business scenarios, four analyst views, bounded CSV input, visible live generation, and an attention-directed 3D brief. InsightMotion: ask data, let GPT direct attention, and share a decision, not a stale screenshot.
