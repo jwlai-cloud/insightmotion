@@ -19,7 +19,7 @@ Browser
 - `app/page.tsx`: app entry point.
 - `components/live-snapshot.tsx`: demo gate, controls, URL state, model calls,
   three-attempt repair loop, visible AI decision and generated-code panels.
-- `components/snapshot-stage.tsx`: owns renderer, scene, camera, lighting,
+- `components/snapshot-stage.tsx`: owns renderer, scene, camera, OrbitControls, lighting,
   resize observer, animation loop, and generated-code execution contract.
 - `app/api/access/route.ts`: verifies shared demo code and issues a signed,
   eight-hour HTTP-only cookie.

@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:15,000
+A CSV is not a decision.
+
+2
+00:00:15,000 --> 00:00:30,000
+Simulated aggregate data for a reliable demo · Temporary CSV upload supported
+
+3
+00:00:30,000 --> 00:00:46,000
+Ask a business question. No chart picker.
+
+4
+00:00:46,000 --> 00:01:04,000
+Live GPT generation — wait removed for pacing
+
+5
+00:01:04,000 --> 00:01:26,000
+GPT generates runnable scene code — labels preserve evidence; motion directs attention.
+
+6
+00:01:26,000 --> 00:01:40,000
+Directed first view · manual inspection second
+
+7
+00:01:40,000 --> 00:01:57,000
+Timestamp + public visual direction + generated code = visible live proof
+
+8
+00:01:57,000 --> 00:02:16,000
+Same data. New question. New model-directed scene.
+
+9
+00:02:16,000 --> 00:02:34,000
+Server-side key · temporary CSV · constrained runtime · up to 3 repairs
+
+10
+00:02:34,000 --> 00:02:49,000
+2 scenarios · 104 matches · 4 World Cup views · 200-row CSV · 3 repairs
+
+11
+00:02:49,000 --> 00:03:00,000
+Ask data. Let GPT direct attention. Share a decision.

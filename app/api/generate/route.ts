@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
-import { hasDemoAccess, isPreviewDemoBypassEnabled } from "@/lib/demo-session";
+import { hasDemoAccess, isDemoAccessBypassEnabled } from "@/lib/demo-session";
 import { dataFor, isHighlightForScenario, isScenarioId } from "@/lib/retail-data";
 
 export const runtime = "nodejs";
@@ -46,11 +46,11 @@ Return strict JSON with exactly: code, caption, insight, visualPlan.
 
 The browser already gives code these variables: scene (THREE.Scene), camera (THREE.PerspectiveCamera), THREE (three.js namespace), anime (anime.js v3 namespace). Ambient and directional lights already exist. Do not create renderer, scene, camera, lights, DOM nodes, fetches, imports, external resources, or external textures. CanvasTexture is allowed only for compact, readable in-scene Sprite labels.
 
-Build polished compact scene from primitive geometry only. MANDATORY: label every primary bar/tower directly in the three.js scene with its short name plus a rounded primary numeric value; use CanvasTexture Sprite labels facing camera. MANDATORY: make the focus movement obvious within the first four seconds: animate a camera push/pan/orbit and pulse or ring on the focus object. The viewer must understand the insight with sound off. Choose only from data in the input: regional pillars, market-mix towers, a tournament-stage timeline, or a compact globe-like regional comparison. Keep scene within 6x6x6 centered around origin, modest mesh count, markers/rings/labels when useful. Make focus unmistakable with color, dimmed context, camera move, pulse, or subtle orbit. Define window.__sceneUpdate = function(elapsedSeconds) only if useful. Code must execute as a single snippet and be compact. Respect every numeric value supplied; never invent data. For sportsbook data, provide internal operations analysis only: never offer betting advice, predictions, odds, or claims about individual people.`;
+Build polished compact scene from primitive geometry only. MANDATORY: label every primary bar/tower directly in the three.js scene with its short name plus a rounded primary numeric value; use compact CanvasTexture Sprite labels facing camera. Keep every object and label in the initial camera frame: no label may be clipped above the viewport, and no Sprite label may exceed 2.4 scene units wide. MANDATORY: make the focus movement obvious within the first four seconds: animate a camera push/pan/orbit and pulse or ring on the focus object. The viewer must understand the insight with sound off. Choose only from data in the input: regional pillars, market-mix towers, a tournament-stage timeline, or a compact globe-like regional comparison. Keep scene within 6x6x6 centered around origin, modest mesh count, markers/rings/labels when useful. Make focus unmistakable with color, dimmed context, camera move, pulse, or subtle orbit. Define window.__sceneUpdate = function(elapsedSeconds) only if useful. Code must execute as a single snippet and be compact. Respect every numeric value supplied; never invent data. For sportsbook data, provide internal operations analysis only: never offer betting advice, predictions, odds, or claims about individual people.`;
 }
 
 export async function POST(request: Request) {
-  if (!isPreviewDemoBypassEnabled() && !(await hasDemoAccess())) return NextResponse.json({ error: "Demo access required." }, { status: 401 });
+  if (!isDemoAccessBypassEnabled() && !(await hasDemoAccess())) return NextResponse.json({ error: "Demo access required." }, { status: 401 });
   if (!process.env.OPENAI_API_KEY) return NextResponse.json({ error: "OPENAI_API_KEY is not configured." }, { status: 500 });
 
   const body = await request.json().catch(() => null) as GenerateRequest | null;

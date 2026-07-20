@@ -22,6 +22,9 @@ DEMO_SESSION_SECRET=long-random-string
 
 # Only for a Vercel Preview deployment while recording; do not set in Production.
 BEFORE_YOU_BELIEVE_DEMO_BYPASS=false
+
+# Temporary capture override for any environment; remove or set false after recording.
+DEMO_ACCESS_BYPASS=false
 ```
 
 Open `http://localhost:3000`, enter the demo code, ask a sales question, and

@@ -15,6 +15,7 @@ JavaScript in a three.js/anime.js scene.
 - [ ] Generate calls `/api/generate`, which calls GPT-5.6 server-side (key never exposed to client) and returns working code + caption
 - [ ] The returned code renders in a three.js/anime.js scene with no visible flicker/crash; if the generated code throws, the existing auto-repair retry logic (from the sketch-to-3D prototype) kicks in, up to 3 attempts
 - [ ] The camera or highlight animation visibly draws attention to the selected region — this must be demo-visible, not just implemented
+- [ ] Every live scene keeps its title and numeric labels within the initial camera frame and offers direct drag-to-orbit, scroll/pinch-to-zoom, and right-drag-to-pan controls
 - [ ] Reloading the exact same URL re-triggers generation (proving "never stale," even against the same static dataset for the MVP)
 - [ ] Deployed on Vercel with a real public URL
 - [ ] A short caption sentence renders above/below the scene
@@ -109,9 +110,7 @@ an account system.
   camera movement, and/or orbit. The generated caption states the selected
   takeaway in one plain-language sentence. The user question may change the
   finding and visual priority; it does not use a prerecorded scene.
-- The browser will provide the prototype's base scene lighting and fixed
-  nearby camera setup. Generated code is responsible for objects and the
-  attention cue within the prototype's compact scene bounds.
+- The browser will provide the prototype's base scene lighting, a bounded initial camera, and OrbitControls for manual orbit, zoom, and pan. Generated code is responsible for objects and the attention cue within the prototype's compact scene bounds; its labels must remain in the visible frame.
 - The UI will show loading, repair-attempt, success, and final-error states,
   plus the caption, AI decision panel, live-generation timestamp, and an
   optional generated-code disclosure for demo/debug visibility.
@@ -127,7 +126,7 @@ an account system.
   `process.env.DEMO_SESSION_SECRET`; no database, account record, or auth
   provider is used.
 - The UI describes this only as “Demo access,” never as full authentication.
-- Temporary Preview capture bypass: setting `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` skips the judge-code cookie only when Vercel sets `VERCEL_ENV=preview`. Production cannot use this bypass; GPT generation still requires `OPENAI_API_KEY`.
+- Temporary capture bypasses: `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` remains Preview-only. `DEMO_ACCESS_BYPASS=true` skips the judge-code cookie in any environment for a short recording window; remove it or set it to `false` immediately after capture. GPT generation still requires `OPENAI_API_KEY`.
 
 ### File layout
 

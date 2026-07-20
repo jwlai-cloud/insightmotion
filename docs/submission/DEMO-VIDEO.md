@@ -1,81 +1,107 @@
-# InsightMotion — 3-minute demo video
+# InsightMotion — exact 180-second demo video
 
-## Core claim
+## Single claim
 
-**InsightMotion turns a data question into a live, attention-directed decision
-brief—not another stale dashboard screenshot.**
+**A CSV is not a decision. InsightMotion turns a business question into a live,
+AI-directed 3D brief that tells a team where to look.**
 
-## Exact shot list — 180 seconds
+## Shot list — 180 seconds exactly
 
-| # | Time | Source | On screen | Narration / text | Technique |
-|---|---|---|---|---|---|
-| 1 | 0:00–0:12 | Title card | “A CSV is not a decision.” | “Teams get a CSV, then still have to choose the chart and explain where to look. InsightMotion does both live.” | Fade in. Show CSV becoming an animated 3D brief. |
-| 2 | 0:12–0:26 | Browser | InsightMotion World Cup scenario; 104-match label. | “InsightMotion is an internal analytics brief for a post-tournament World Cup review.” | Slow zoom into scenario title. |
-| 3 | 0:26–0:42 | Browser | Select Global regions; question: “Which region drove post-tournament growth?” | “An analyst asks a normal business question. No chart type is chosen up front.” | Cursor highlight on question. |
-| 4 | 0:42–0:57 | Browser, paused capture | Click Generate; visible “Analyze data → Generate code → Run scene” trace; generated-code section opens. | “GPT-5.6 Terra receives selected simulated aggregate data. It writes the finding, public visual direction, caption, and three.js/anime.js scene code.” | Freeze during wait. Circle the live trace, then reveal the code disclosure. Overlay: “Live GPT generation — cut wait time.” |
-| 5 | 0:57–1:23 | Browser | Result scene: globe/pillars; camera moves from Europe to APAC; AI decision card. | “Europe is largest by volume. GPT identifies APAC as fastest growth, then moves the camera and pulse toward that story. The motion is the explanation.” | Let animation run. Zoom into caption card. |
-| 6 | 1:23–1:43 | Browser | Change focus to Betting markets; ask “Which market accelerated most during knockouts?” | “Same dataset. New question. GPT now chooses a different visual narrative.” | Hard cut before Generate; keep result reveal. |
-| 7 | 1:43–1:58 | Browser | Market towers; Live in-play tower highlighted; generated timestamp and code. | “This is not prerecorded. The visible timestamp, AI finding, visual plan, and generated code prove the live model run.” | Highlight timestamp then code disclosure. |
-| 8 | 1:58–2:16 | Browser | Copy/reload query-string URL; generate again. | “The share link contains selection state, not a saved image. Reloading re-asks the model against current data.” | Cut loading wait; overlay “Fresh generation on load.” |
-| 9 | 2:16–2:36 | Architecture diagram | Architecture + sequence panel. | “One Vercel project keeps the API key server-side. A signed demo gate limits cost. Browser executes a constrained three.js contract and sends failures back for up to three repairs.” | Ken Burns pan architecture → sequence. |
-| 10 | 2:36–2:50 | Proof card | “2 scenarios · 104-match review · 4 World Cup views · 3 repair attempts.” | “We built two simulated business scenarios, four World Cup analysis views, and a visible repair loop in one deployable app.” | Numbers appear one by one. |
-| 11 | 2:50–3:00 | Closing card | Tagline, Vercel URL, repo URL. | “InsightMotion: ask data, let GPT direct attention, and share a decision—not a stale screenshot.” | Hold links for full 10 seconds. |
+| # | Time | What is shown | Narration / subtitle | Edit direction |
+|---|---|---|---|---|
+| 1 | 0:00–0:15 | Title card: `A CSV is not a decision.` CSV fades into a labeled 3D scene. | “A team receives a CSV, chooses a chart, and still has to explain where everyone should look. That explanation is usually a stale screenshot.” | Slow push-in; persistent lower third: `InsightMotion · GPT-directed data briefs`. |
+| 2 | 0:15–0:30 | App landing on World Cup 2026 Trading Review. Point at `simulated operations data`. | “For this demo we start with simulated aggregate World Cup operations data: 104 matches, no individual users, no betting advice. The same flow also accepts a temporary CSV.” | Cyan box around simulated-data label; subtitle: `Predefined data for a reliable demo · CSV supported`. |
+| 3 | 0:30–0:46 | Upload control briefly; then select `Global regions`, type question. | “An analyst can upload a CSV of up to 200 rows, or use a prepared scenario. I’ll ask: Which region drove post-tournament growth? There is no chart picker.” | Cursor halo on upload, then question field. |
+| 4 | 0:46–1:04 | Click Generate. Capture until `1 Analyze data` / `2 Generate code`; freeze if necessary. | “Now the live loop begins. GPT-5.6 Terra receives the current data and question. It identifies the finding, writes the visual plan, and generates the three.js and anime.js code.” | Pause the clip while waiting. Circle top-left trace. On-screen: `Live GPT generation — wait removed for pacing`. |
+| 5 | 1:04–1:26 | Resume at live scene. Let automatic camera motion, focus ring, labels play. | “The model does not return a chart image. It returns a runnable scene. Numeric labels preserve the evidence; the camera push and gold focus tell the viewer what changed and where to look.” | Let scene move for 8 seconds. Box decision brief; then box one numeric label. |
+| 6 | 1:26–1:40 | Drag orbit, scroll zoom, right-drag pan. | “The reveal is directed, but the scene remains explorable. A teammate can orbit, zoom, and pan instead of trusting a fixed screenshot.” | Cursor trail; subtitle: `Directed first view · manual inspection second`. |
+| 7 | 1:40–1:57 | Open `View GPT-generated scene code → browser runtime`; show timestamp, visual direction. | “This is the proof that it is live: the timestamp, public visual direction, and generated code are in the product. We show the result, not private chain-of-thought.” | Highlight timestamp → code disclosure → `Run scene` trace. |
+| 8 | 1:57–2:16 | Switch focus to markets and ask a different question; cut loading wait, reveal different scene. | “Same dataset, new question: Which market accelerated during knockouts? GPT selects a new story and writes a new scene. This is not a prerecorded animation.” | Hard cut on click; reveal with a gold callout on new focus. |
+| 9 | 2:16–2:34 | Architecture diagram. | “One Vercel app keeps the OpenAI key on the server. CSV input is temporary. The browser runs a constrained three.js contract, and a runtime error goes back to GPT for up to three repairs.” | Ken Burns left-to-right across architecture then sequence diagram. |
+| 10 | 2:34–2:49 | Proof card: `2 scenarios · 104 matches · 4 World Cup views · 200-row CSV limit · 3 repairs`. | “In one deployable MVP: two business scenarios, four World Cup views, bounded CSV input, visible live generation, and a three-attempt repair loop.” | Animate numbers one at a time; sound-off readable. |
+| 11 | 2:49–3:00 | Closing card with product, preview URL, GitHub URL. | “InsightMotion: ask data, let GPT direct attention, and share a decision — not a stale screenshot.” | Hold links 11 seconds. |
 
-## Full narration
+## Voiceover — read at 135–145 words per minute
 
-Read at conversational pace. Do not narrate loading time; use on-screen card
-from Shot 4 and resume at the result.
+> A team receives a CSV, chooses a chart, and still has to explain where
+> everyone should look. That explanation is usually a stale screenshot.
+> InsightMotion changes the deliverable itself. It turns a business question
+> into a live, AI-directed 3D decision brief.
+>
+> For this demo we begin with simulated aggregate World Cup operations data:
+> 104 matches, no individual users, and no betting advice. We use prepared
+> data for a reliable walkthrough, but an analyst can also upload a temporary
+> CSV of up to 200 rows. It is used only for the current request and is never
+> stored.
+>
+> I select global regions and ask a normal question: which region drove
+> post-tournament growth? Notice what I do not do: I never choose a chart.
+>
+> When I click Generate, the visible pipeline shows the work in order. First,
+> GPT-5.6 Terra analyzes the current data. Next, it writes the finding, a public
+> visual direction, and executable three.js and anime.js code. Then the browser
+> runs that code as a live scene. We cut the waiting time here for pacing, but
+> we do not pretend the model answered instantly.
+>
+> The result is not a chart image. It is a labeled scene. The numeric labels
+> preserve the evidence. The camera push, gold focus, and pulse answer a more
+> useful question than a dashboard can: where should the team look first?
+> And after the directed reveal, a teammate can orbit, zoom, and pan to inspect
+> the scene themselves.
+>
+> The timestamp, public visual direction, and generated-code disclosure make
+> the live run visible without exposing private chain-of-thought. Now I change
+> only the question to ask which market accelerated during knockouts. Same
+> dataset, new model-directed story, new generated scene. That is the point:
+> this is not a prerecorded animation.
+>
+> Under the hood, one Vercel app keeps the OpenAI key server-side. Temporary
+> CSV input is never persisted. The browser executes a constrained visual
+> contract, and if generated code fails at runtime, InsightMotion sends the
+> error and prior code back for up to three repairs.
+>
+> In one deployable MVP, we built two business scenarios, four World Cup views,
+> bounded CSV input, visible live generation, and an attention-directed 3D
+> brief. InsightMotion: ask data, let GPT direct attention, and share a
+> decision — not a stale screenshot.
 
-> Dashboard screenshots go stale. They also make every viewer hunt for the
-> point. InsightMotion turns a data question into a live, attention-directed
-> decision brief. Here, an internal trading analyst is reviewing simulated
-> aggregate data from 104 World Cup matches. I ask which region drove
-> post-tournament growth. GPT-5.6 Terra receives only the selected data and
-> question. It returns the insight, caption, public visual direction, and
-> executable scene code. Europe is largest by volume. But APAC is the growth
-> story, so GPT moves the camera there and pulses that pillar. The motion is
-> not decoration; it answers where to look. Now I switch to betting markets
-> and ask which market accelerated during knockouts. Same data, different
-> question, different model-directed scene. The timestamp, visual plan, and
-> generated code are shown in the product so this is visibly live—not a
-> prerecorded animation. This link stores selection state, not an image, so a
-> reload regenerates the brief. Under the hood, one Vercel app keeps the API
-> key on the server, gates demo cost with a signed cookie, and retries failed
-> generated scenes up to three times. InsightMotion: ask data, let GPT direct
-> attention, and share a decision—not a stale screenshot.
+## Capture protocol
 
-## Recording and edit runbook
+1. Wait for the `dev` Vercel Preview to include the latest scene-control commit.
+   Configure Preview only: `OPENAI_API_KEY` and
+   `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true`. Production never uses the bypass.
+2. Record each shot as a separate 1080p, 30fps clip. Keep 2 seconds of clean
+   buffer at both ends. Hide notifications, keys, bookmarks, and other tabs.
+3. For each model call, record the click and visible trace. Stop capture while
+   the request is pending; resume only after a real result appears. Add the
+   exact overlay: `Live GPT generation — wait removed for pacing`.
+4. Record Shot 6 manually with a visible cursor. Use drag orbit, scroll zoom,
+   and right-drag pan after the initial automatic reveal completes.
+5. Watch every raw clip once for secrets and numeric consistency before editing.
+6. Watch the final export with sound off. The title, trace, labels, decision
+   card, code disclosure, and captions must still tell the story.
 
-1. Deploy a recording-only Vercel Preview first. Use a real `OPENAI_API_KEY`; set `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` only in Preview to skip the judge-code entry during capture. Production still uses the demo code and session secret.
-2. Record separate clips: title card, World Cup regions result, World Cup
-   markets result, share/reload result, diagrams, proof/closing card.
-3. Before every take: hide keys, notifications, unrelated tabs, bookmarks, and
-   personal browser profile content. Use 1440p or 1080p; browser zoom 100%.
-4. Do one dry run. If model wait exceeds 8 seconds, stop recording after click;
-   resume capture once result is ready. Overlay “Live GPT generation — wait
-   removed for pacing.” Never claim response happened instantly.
-5. Normalize clips to 1920×1080, 30fps. Add text overlays only after review for
-   secrets and numeric consistency.
-
-### ffmpeg starting commands
+## FFmpeg edit template
 
 ```bash
-# Normalize one capture
-ffmpeg -i raw-world-cup.mp4 -vf "scale=1920:1080,fps=30" -c:v libx264 -pix_fmt yuv420p -c:a aac world-cup.mp4
+# Normalize each raw clip first.
+ffmpeg -i raw/shot-05.mp4 -vf "scale=1920:1080,fps=30" -c:v libx264 -pix_fmt yuv420p -c:a aac clips/shot-05.mp4
 
-# Highlight caption card from 0:57 to 1:23 (coordinates adjust after capture)
-ffmpeg -i world-cup.mp4 -vf "drawbox=x=65:y=700:w=780:h=280:color=0x74e7de@0.9:t=4:enable='between(t,57,83)'" -c:a copy world-cup-highlight.mp4
+# Test the generation-trace callout on a short clip before using it in the edit.
+ffmpeg -ss 0 -t 5 -i clips/shot-04.mp4 -vf "drawbox=x=18:y=82:w=390:h=42:color=0x74e7de@0.95:t=4,drawtext=text='Live GPT generation — wait removed for pacing':fontcolor=white:fontsize=28:box=1:boxcolor=0x07111e@0.82:boxborderw=12:x=(w-text_w)/2:y=h-110" -c:v libx264 -pix_fmt yuv420p tests/shot-04-trace.mp4
 
-# Final clips must be normalized first; then create concat_list.txt and run:
-ffmpeg -f concat -safe 0 -i concat_list.txt -c copy live-snapshot-demo.mp4
+# Add a decision-card highlight to the full result clip. Tune coordinates only after capture.
+ffmpeg -i clips/shot-05.mp4 -vf "drawbox=x=36:y=760:w=650:h=270:color=0x74e7de@0.92:t=4:enable='between(t,4,15)'" -c:a copy edits/shot-05-highlight.mp4
 
-# Verify duration: must be <= 180 seconds
-ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 live-snapshot-demo.mp4
+# Build concat_list.txt from normalized/finalized shots, then stitch.
+ffmpeg -f concat -safe 0 -i concat_list.txt -c copy insightmotion-demo.mp4
+
+# Final hard limit check: must be at or under 180 seconds.
+ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 insightmotion-demo.mp4
 ```
 
-## Capture blocker
+## Truthfulness rule
 
-A truthful live-GPT recording requires deployment or local `.env.local` with a
-real API key. This repo currently has no key and no browser-recording tool
-connected, so do not record a fake “live generation” clip. Once a real demo is
-running, capture Shots 3–8 as separate clips and assemble per this runbook.
+Never fake a live model response. Pausing the recording while a real request
+runs is allowed; the visible trace, result timestamp, generated code, and
+caption must all come from the actual completed request.

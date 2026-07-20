@@ -44,6 +44,10 @@ export function isPreviewDemoBypassEnabled() {
   return process.env.VERCEL_ENV === "preview" && process.env.BEFORE_YOU_BELIEVE_DEMO_BYPASS === "true";
 }
 
+export function isDemoAccessBypassEnabled() {
+  return process.env.DEMO_ACCESS_BYPASS === "true" || isPreviewDemoBypassEnabled();
+}
+
 export const demoCookie = {
   name: COOKIE_NAME,
   maxAge: MAX_AGE_SECONDS,
