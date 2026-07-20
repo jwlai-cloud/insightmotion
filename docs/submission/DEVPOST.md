@@ -46,8 +46,24 @@ create the explanation *and* choreograph the viewer’s attention in real time.
   demo session protects production; an explicitly Preview-only switch supports
   truthful recording without exposing the public demo gate.
 
-Codex accelerated the build from spec through implementation, verification,
-three.js integration, documentation, and submission assets.
+## Built with Codex and GPT-5.6
+
+We worked with Codex as an implementation collaborator throughout the build.
+The product lead set the core choices: a Work & Productivity use case rather
+than a generic visualization toy; two bounded, repeatable simulated scenarios;
+a visible live-generation moment; a dark presentation-oriented UI; and a
+one-day MVP boundary with no database or user accounts. Codex translated the
+spec and supplied prototype into the Next.js app, preserved the tested
+three.js/anime.js scene execution contract, added the server-only OpenAI route
+and repair loop, integrated manual 3D controls, ran builds, addressed PR
+feedback, and produced the deployment and demo-submission materials.
+
+At runtime, `gpt-5.6-terra` is not decoration: it receives the current bounded
+data and analyst question, creates the finding and public visual direction,
+then generates the runnable three.js/anime.js scene code. The server protects
+the key and can give failed generated code and its runtime error back to the
+model for up to three repairs. Codex accelerated engineering; GPT-5.6 creates
+the live, question-specific analytical story the product demonstrates.
 
 ## Challenges we ran into
 

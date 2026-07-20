@@ -50,6 +50,33 @@ generate the snapshot.
   retried up to three times if execution fails. This is a hackathon demo, not a
   sandbox for untrusted production code.
 
+## Built with Codex and GPT-5.6
+
+InsightMotion was built as a close product-and-engineering collaboration with
+Codex. The human product lead set the target: a credible Work & Productivity
+tool, a short demo with a visible live-AI moment, and a deliberately bounded
+one-day MVP. They chose the two repeatable simulated scenarios, the World Cup
+operations opening story, the dark presentation style, the manual 3D
+inspection controls, and the privacy and cost boundaries.
+
+Codex accelerated the workflow from the supplied prototype and written spec:
+it translated the execution contract into a Next.js App Router app, preserved
+the three.js/anime.js generated-scene runtime, added the server-only OpenAI
+route and repair loop, created sample-data handling and CSV limits, integrated
+OrbitControls, ran builds, handled review feedback, and prepared the Vercel,
+README, Devpost, and demo-video materials. The product decisions stayed human:
+Codex provided implementation options and evidence; the product lead chose the
+scope and direction.
+
+At runtime, `gpt-5.6-terra` is the live analytical and creative component. It
+receives the current bounded data and analyst question, produces a factual
+finding and public visual direction, then writes the runnable three.js/anime.js
+scene code. The browser executes that code in the tested contract, while the
+server keeps `OPENAI_API_KEY` private and can ask the model to repair a failed
+scene up to three times. This makes GPT-5.6 responsible for the question-specific
+insight and visual story, while Codex was the coding collaborator that helped
+turn the concept into a working product.
+
 ## Build
 
 ```bash
