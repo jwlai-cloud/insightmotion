@@ -40,6 +40,10 @@ export async function hasDemoAccess() {
   return isValidDemoToken(store.get(COOKIE_NAME)?.value);
 }
 
+export function isPreviewDemoBypassEnabled() {
+  return process.env.VERCEL_ENV === "preview" && process.env.BEFORE_YOU_BELIEVE_DEMO_BYPASS === "true";
+}
+
 export const demoCookie = {
   name: COOKIE_NAME,
   maxAge: MAX_AGE_SECONDS,

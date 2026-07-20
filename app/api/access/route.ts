@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
-import { createDemoToken, demoCookie } from "@/lib/demo-session";
+import { createDemoToken, demoCookie, hasDemoAccess, isPreviewDemoBypassEnabled } from "@/lib/demo-session";
+
+export async function GET() {
+  const bypass = isPreviewDemoBypassEnabled();
+  return NextResponse.json({ ok: bypass || await hasDemoAccess(), bypass });
+}
 
 export async function POST(request: Request) {
+  if (isPreviewDemoBypassEnabled()) return NextResponse.json({ ok: true, bypass: true });
   const body = await request.json().catch(() => null) as { code?: unknown } | null;
   const configuredCode = process.env.DEMO_ACCESS_CODE;
   if (!configuredCode || typeof body?.code !== "string" || body.code !== configuredCode) {
