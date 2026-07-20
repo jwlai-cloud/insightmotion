@@ -2,3 +2,10 @@ node_modules
 .next
 .env.local
 .vercel
+
+# Local demo-video sources and exports
+/video/raw/
+/video/audio/
+/video/cards/
+/video/normalized/
+/video/exports/
