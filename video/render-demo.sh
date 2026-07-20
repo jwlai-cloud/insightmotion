@@ -9,8 +9,14 @@ set -euo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$root"
-font_bold="/System/Library/Fonts/Supplemental/Arial Bold.ttf"
-font_regular="/System/Library/Fonts/Supplemental/Arial.ttf"
+# Defaults target macOS; set FONT_BOLD and FONT_REGULAR for another system.
+font_bold="${FONT_BOLD:-/System/Library/Fonts/Supplemental/Arial Bold.ttf}"
+font_regular="${FONT_REGULAR:-/System/Library/Fonts/Supplemental/Arial.ttf}"
+
+if [[ ! -f "$font_bold" || ! -f "$font_regular" ]]; then
+  echo "Set FONT_BOLD and FONT_REGULAR to valid font files before rendering." >&2
+  exit 1
+fi
 
 mkdir -p video/cards video/exports video/normalized
 
