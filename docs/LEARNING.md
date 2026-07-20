@@ -12,7 +12,7 @@
 - **Signed HTTP-only cookie** limits accidental public API spend without
   building accounts.
 - **Data abstraction:** the same live-generation loop accepts a retail dataset
-  or simulated World Cup aggregate operations review. The model receives only
+  or simulated global football tournament aggregate engagement operations review. The model receives only
   selected scenario data and must use it rather than inventing metrics.
 
 Primary references:

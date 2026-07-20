@@ -1,0 +1,118 @@
+{
+  "_comment": "SIMULATED, AGGREGATED GLOBAL FOOTBALL TOURNAMENT 2026 ENGAGEMENT OPERATIONS DATA ONLY. No personal data, wagering, predictions, or advice.",
+  "scenario": "global-football-2026-review",
+  "title": "Global Football Tournament 2026 Engagement Review",
+  "period": "Post-event review · 104 simulated matches",
+  "tournament": {
+    "matches": 104,
+    "summary": "Simulated global tournament review",
+    "total_engagement_events": 2460000000,
+    "active_viewers": 18400000,
+    "live_engagement_share_percent": 57
+  },
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "engagement_events": 1033000000,
+      "growth_percent": 18,
+      "live_share_percent": 54
+    },
+    {
+      "id": "americas",
+      "label": "Americas",
+      "engagement_events": 787000000,
+      "growth_percent": 14,
+      "live_share_percent": 61
+    },
+    {
+      "id": "apac",
+      "label": "APAC",
+      "engagement_events": 492000000,
+      "growth_percent": 31,
+      "live_share_percent": 63
+    },
+    {
+      "id": "mea",
+      "label": "Middle East & Africa",
+      "engagement_events": 148000000,
+      "growth_percent": 22,
+      "live_share_percent": 49
+    }
+  ],
+  "markets": [
+    {
+      "id": "pre-match",
+      "label": "Pre-match research",
+      "engagement_events": 1090000000,
+      "growth_percent": 12
+    },
+    {
+      "id": "live-center",
+      "label": "Live match center",
+      "engagement_events": 740000000,
+      "growth_percent": 36
+    },
+    {
+      "id": "recaps",
+      "label": "Highlights & recaps",
+      "engagement_events": 390000000,
+      "growth_percent": 9
+    },
+    {
+      "id": "fan-content",
+      "label": "Fan content",
+      "engagement_events": 240000000,
+      "growth_percent": 28
+    }
+  ],
+  "top_matches": [
+    {
+      "id": "final",
+      "label": "Final",
+      "teams": "North Coast vs River City",
+      "engagement_events": 126000000,
+      "peak_concurrent_viewers": 1840000
+    },
+    {
+      "id": "semi-a",
+      "label": "Semi-final A",
+      "teams": "Metro United vs Harbour FC",
+      "engagement_events": 87000000,
+      "peak_concurrent_viewers": 1210000
+    },
+    {
+      "id": "semi-b",
+      "label": "Semi-final B",
+      "teams": "Summit FC vs Valley Athletic",
+      "engagement_events": 81000000,
+      "peak_concurrent_viewers": 1170000
+    }
+  ],
+  "timeline": [
+    {
+      "stage": "Group stage",
+      "engagement_events": 711000000
+    },
+    {
+      "stage": "Round of 32",
+      "engagement_events": 383000000
+    },
+    {
+      "stage": "Round of 16",
+      "engagement_events": 336000000
+    },
+    {
+      "stage": "Quarter-finals",
+      "engagement_events": 342000000
+    },
+    {
+      "stage": "Semi-finals",
+      "engagement_events": 212000000
+    },
+    {
+      "stage": "Final",
+      "engagement_events": 126000000
+    }
+  ]
+}

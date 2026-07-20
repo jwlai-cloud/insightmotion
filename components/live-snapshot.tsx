@@ -3,7 +3,7 @@
 import { ChangeEvent, FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { SnapshotStage, type StageController } from "./snapshot-stage";
 
-type ScenarioId = "world-cup-2026-review" | "retail-q2-2026";
+type ScenarioId = "global-football-2026-review" | "retail-q2-2026";
 type Generation = { code: string; caption: string; insight: string; visualPlan: string; generatedAt: string; model: string };
 type Option = { id: string; label: string };
 type UploadedCsv = { name: string; columns: string[]; rows: Record<string, string>[] };
@@ -27,16 +27,16 @@ function parseCsv(text: string) {
 }
 
 const scenarios: Record<ScenarioId, { label: string; period: string; focus: Option[]; highlights: Record<string, Option[]>; prompts: string[] }> = {
-  "world-cup-2026-review": {
-    label: "World Cup 2026 Trading Review", period: "Post-tournament · 104 matches · simulated operations data",
-    focus: [{ id: "regions", label: "Global regions" }, { id: "markets", label: "Betting markets" }, { id: "top_matches", label: "Top matches" }, { id: "timeline", label: "Tournament stages" }],
+  "global-football-2026-review": {
+    label: "Global Football Tournament 2026 Engagement Review", period: "Post-tournament · 104 matches · simulated operations data",
+    focus: [{ id: "regions", label: "Global regions" }, { id: "markets", label: "Engagement channels" }, { id: "top_matches", label: "Top matches" }, { id: "timeline", label: "Tournament stages" }],
     highlights: {
       regions: [{ id: "europe", label: "Europe" }, { id: "americas", label: "Americas" }, { id: "apac", label: "APAC" }, { id: "mea", label: "Middle East & Africa" }],
-      markets: [{ id: "match-result", label: "Match result" }, { id: "in-play", label: "Live in-play" }, { id: "accumulators", label: "Accumulators" }, { id: "player-props", label: "Player props" }],
-      top_matches: [{ id: "final", label: "Final · Spain vs Argentina" }, { id: "semi-1", label: "Semi-final 1" }, { id: "semi-2", label: "Semi-final 2" }],
+      markets: [{ id: "pre-match", label: "Pre-match research" }, { id: "live-center", label: "Live match center" }, { id: "recaps", label: "Highlights & recaps" }, { id: "fan-content", label: "Fan content" }],
+      top_matches: [{ id: "final", label: "Final · North Coast vs River City" }, { id: "semi-a", label: "Semi-final A" }, { id: "semi-b", label: "Semi-final B" }],
       timeline: [{ id: "group-stage", label: "Group stage" }, { id: "round-of-32", label: "Round of 32" }, { id: "round-of-16", label: "Round of 16" }, { id: "quarter-finals", label: "Quarter-finals" }, { id: "semi-finals", label: "Semi-finals" }, { id: "final", label: "Final" }],
     },
-    prompts: ["Which region drove post-tournament growth?", "What match created the biggest volume spike?", "Which market accelerated most during knockouts?"],
+    prompts: ["Which region drove post-tournament growth?", "What event created the biggest engagement spike?", "Which engagement channel accelerated most during knockouts?"],
   },
   "retail-q2-2026": {
     label: "Retail performance · Q2 2026", period: "Q2 2026 · simulated sales data",
@@ -51,8 +51,8 @@ function extractCode(raw: string) { const text = (raw || "").trim(); const fence
 export function LiveSnapshot() {
   const stageRef = useRef<StageController | null>(null);
   const [accessCode, setAccessCode] = useState(""); const [hasAccess, setHasAccess] = useState(false); const [accessError, setAccessError] = useState("");
-  const [scenario, setScenario] = useState<ScenarioId>("world-cup-2026-review"); const [focus, setFocus] = useState("regions"); const [highlight, setHighlight] = useState("europe");
-  const [question, setQuestion] = useState(scenarios["world-cup-2026-review"].prompts[0]); const [status, setStatus] = useState("Enter demo access to generate a live snapshot.");
+  const [scenario, setScenario] = useState<ScenarioId>("global-football-2026-review"); const [focus, setFocus] = useState("regions"); const [highlight, setHighlight] = useState("europe");
+  const [question, setQuestion] = useState(scenarios["global-football-2026-review"].prompts[0]); const [status, setStatus] = useState("Enter demo access to generate a live snapshot.");
   const [error, setError] = useState(""); const [generation, setGeneration] = useState<Generation | null>(null); const [isGenerating, setIsGenerating] = useState(false); const [traceStep, setTraceStep] = useState(0); const [uploadedCsv, setUploadedCsv] = useState<UploadedCsv | null>(null); const [uploadError, setUploadError] = useState("");
   const config = scenarios[scenario]; const highlightOptions = useMemo(() => config.highlights[focus] || [], [config, focus]);
 

@@ -38,16 +38,32 @@ create the explanation *and* choreograph the viewer’s attention in real time.
 - **Reliability:** fence stripping, scene reset, per-frame error containment,
   and up to three model repair attempts preserve the supplied prototype’s
   execution contract.
-- **Data and privacy:** World Cup 2026 operations and Q2 retail scenarios are
+- **Data and privacy:** Global Football Tournament 2026 engagement operations and Q2 retail scenarios are
   clearly simulated. Optional CSV data is parsed in-browser, limited to 200
   rows / 20 columns, sent only with the current generation request, and never
   persisted.
 - **Cost control:** `OPENAI_API_KEY` stays server-side. A signed, HTTP-only
-  demo session protects production; an explicitly Preview-only switch supports
-  truthful recording without exposing the public demo gate.
+  demo session protects normal use; a deliberately temporary environment
+  override can support truthful recording and must be removed after capture.
 
-Codex accelerated the build from spec through implementation, verification,
-three.js integration, documentation, and submission assets.
+## Built with Codex and GPT-5.6
+
+We worked with Codex as an implementation collaborator throughout the build.
+The product lead set the core choices: a Work & Productivity use case rather
+than a generic visualization toy; two bounded, repeatable simulated scenarios;
+a visible live-generation moment; a dark presentation-oriented UI; and a
+one-day MVP boundary with no database or user accounts. Codex translated the
+spec and supplied prototype into the Next.js app, preserved the tested
+three.js/anime.js scene execution contract, added the server-only OpenAI route
+and repair loop, integrated manual 3D controls, ran builds, addressed PR
+feedback, and produced the deployment and demo-submission materials.
+
+At runtime, `gpt-5.6-terra` is not decoration: it receives the current bounded
+data and analyst question, creates the finding and public visual direction,
+then generates the runnable three.js/anime.js scene code. The server protects
+the key and can give failed generated code and its runtime error back to the
+model for up to three repairs. Codex accelerated engineering; GPT-5.6 creates
+the live, question-specific analytical story the product demonstrates.
 
 ## Challenges we ran into
 
@@ -58,14 +74,14 @@ three.js integration, documentation, and submission assets.
 2. **A scene can be technically correct but visually unclear.** We constrained
    the model to render in-frame numeric labels and an obvious camera/focus cue
    in the first four seconds, then added direct orbit, zoom, and pan controls.
-3. **A sports example could look like a betting product.** The World Cup demo
-   is simulated aggregate internal operations data only: no individual users,
-   odds, predictions, or betting advice.
+3. **A tournament example could be mistaken for a wagering product.** The Global
+   Football Tournament demo is simulated aggregate engagement operations data
+   only: no personal data, wagering, predictions, or advice.
 
 ## Accomplishments we’re proud of
 
 - **2** simulated business scenarios in one deployable app.
-- **104** simulated World Cup matches across **4** analyst views.
+- **104** simulated tournament matches across **4** analyst views.
 - **200 rows / 20 columns**: bounded, ephemeral CSV input with no database.
 - Up to **3** automated generated-scene repair attempts per request.
 - **0** client-exposed OpenAI API keys, **0** database tables, and **1** Vercel
@@ -94,6 +110,13 @@ three.js, anime.js.
 
 ## Try it out
 
-- Live Preview: https://insightmotion-git-dev-jwlaiclouds-projects.vercel.app/
+- Live demo: https://insightmotion.vercel.app/
 - Source: https://github.com/jwlai-cloud/insightmotion
-- Demo video: add the final unlisted video URL after export.
+- Demo video: add the final **public YouTube** URL before submitting.
+
+## Submission form fields
+
+- Codex Session ID (core-functionality thread): `019f7a26-9704-7fc2-8c85-2ae27d2bfa1c`
+- Judge testing access: live demo open via `DEMO_ACCESS_BYPASS=true` on prod through the
+  Judging Period (until Aug 5, 2026); no code needed. Keep the OpenAI key funded so live
+  generation works for judges.

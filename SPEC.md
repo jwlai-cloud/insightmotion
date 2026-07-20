@@ -11,7 +11,7 @@ JavaScript in a three.js/anime.js scene.
 
 ## Acceptance criteria
 
-- [ ] `npm run dev` shows a page with: a scenario picker (World Cup 2026 post-tournament review first; retail sales as a second simulated scenario), an optional ephemeral CSV uploader limited to 200 data rows, a context-aware highlight selector, question box, and Generate button
+- [ ] `npm run dev` shows a page with: a scenario picker (Global Football Tournament 2026 post-event review first; retail sales as a second simulated scenario), an optional ephemeral CSV uploader limited to 200 data rows, a context-aware highlight selector, question box, and Generate button
 - [ ] Generate calls `/api/generate`, which calls GPT-5.6 server-side (key never exposed to client) and returns working code + caption
 - [ ] The returned code renders in a three.js/anime.js scene with no visible flicker/crash; if the generated code throws, the existing auto-repair retry logic (from the sketch-to-3D prototype) kicks in, up to 3 attempts
 - [ ] The camera or highlight animation visibly draws attention to the selected region — this must be demo-visible, not just implemented
@@ -82,14 +82,14 @@ an account system.
 ### Data and URL behavior
 
 - Keep the two shipped datasets as the default demo data. Add an optional CSV upload that is parsed in-browser, limited to 200 data rows and 20 columns, sent only with the current generation request, and never stored.
-- Add `data/retail-sales.json` and `data/world-cup-2026-review.json` as valid
+- Add `data/retail-sales.json` and `data/global-football-2026-review.json` as valid
   JSON with `_comment` fields clearly labeling contents as simulated data
   (JSON has no native comments).
 - Ship two scenarios only: retail Q2 2026 with West/East/Central sales data,
-  plus World Cup 2026 post-tournament sportsbook operations data. The World
+  plus Global Football Tournament 2026 post-event engagement operations data. The World
   Cup scenario is a simulated internal analytics review of 104 matches,
-  aggregate regional volume, betting-market mix, top-match volume, and
-  tournament-time series—not real bettor data, betting advice, odds, or a
+  aggregate regional engagement, channel mix, top-event engagement, and
+  tournament-time series—not personal data, wagering advice, or a
   prediction service.
 - Use URL query parameters `scenario`, `focus`, and `highlight` as the complete
   shareable state, plus `question` when present. The page initializes controls
@@ -97,7 +97,7 @@ an account system.
 - On initial page load, if valid selection query parameters exist, automatically
   trigger generation. Therefore reloading the exact URL calls `/api/generate`
   again rather than displaying a cached image or persisted result.
-- The scenario picker defaults to “World Cup 2026 Trading Review” and also
+- The scenario picker defaults to “Global Football Tournament 2026 Engagement Review” and also
   offers “Retail performance · Q2 2026.” The highlight selector changes with
   scenario. The app includes an “Ask this data” text box with three preset
   prompt chips per scenario for reliable demo beats.

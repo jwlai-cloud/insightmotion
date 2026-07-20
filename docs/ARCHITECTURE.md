@@ -27,15 +27,15 @@ Browser
   prompt construction, and structured response validation.
 - `data/retail-sales.json`: static simulated Q2 2026 source data.
 - `data/world-cup-2026-review.json`: static simulated aggregate internal
-  sportsbook operations review for 104 World Cup matches. It contains no
-  individual bettor data, real odds, prediction, or betting advice.
+  event-engagement operations review for 104 simulated tournament matches. It
+  contains no personal data, wagering, predictions, or advice.
 
 ## Data flow
 
 URL query parameters (`scenario`, `focus`, `highlight`, `question`) are the
 shareable state. The page copies controls into the URL before every generation.
 Opening a shared URL, then passing demo access, triggers a new model request.
-No generation, chat history, or user data is persisted. World Cup is the
+No generation, chat history, or user data is persisted. Global Football Tournament is the
 default scenario; retail remains a second scenario.
 
 ## Security boundaries

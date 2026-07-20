@@ -10,7 +10,7 @@ flowchart LR
   A["① Analyst\nquestion + optional CSV"]:::user --> B["Browser\ncontrols + URL state"]:::user
   B --> C["② /api/access\nsigned demo session"]:::server
   B --> D["③ /api/generate\nvalidate + construct prompt"]:::server
-  E[("Simulated JSON\nWorld Cup + retail")]:::data --> D
+  E[("Simulated JSON\nTournament + retail")]:::data --> D
   F[("Temporary CSV\n≤200 rows, ≤20 columns\nnot persisted")]:::data --> D
   C -. authorizes .-> D
   D --> G["④ GPT-5.6 Terra\nfinding + visual plan + code"]:::model
@@ -72,7 +72,7 @@ UPLOAD OR CHOOSE DEMO DATA  →  ASK A QUESTION  →  GPT DIRECTS ATTENTION
 Temporary CSV ≤200 rows        Plain language     Insight + code + 3D motion
 Never stored                   No chart picker    Labels + camera + controls
 
-104 simulated World Cup matches · 4 analyst views · 2 business scenarios
+104 simulated tournament matches · 4 analyst views · 2 business scenarios
 
 Next.js → GPT-5.6 Terra → three.js + anime.js → Vercel
 ```
