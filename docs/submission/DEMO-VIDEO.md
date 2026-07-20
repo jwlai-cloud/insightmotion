@@ -10,15 +10,15 @@ AI-directed 3D brief that tells a team where to look.**
 | # | Time | What is shown | Narration / subtitle | Edit direction |
 |---|---|---|---|---|
 | 1 | 0:00–0:15 | Title card: `A CSV is not a decision.` CSV fades into a labeled 3D scene. | “A team receives a CSV, chooses a chart, and still has to explain where everyone should look. That explanation is usually a stale screenshot.” | Slow push-in; persistent lower third: `InsightMotion · GPT-directed data briefs`. |
-| 2 | 0:15–0:30 | App landing on World Cup 2026 Trading Review. Point at `simulated operations data`. | “For this demo we start with simulated aggregate World Cup operations data: 104 matches, no individual users, no betting advice. The same flow also accepts a temporary CSV.” | Cyan box around simulated-data label; subtitle: `Predefined data for a reliable demo · CSV supported`. |
+| 2 | 0:15–0:30 | App landing on Global Football Tournament 2026 Engagement Review. Point at `simulated operations data`. | “For this demo we start with simulated aggregate tournament engagement data: 104 matches, no personal data, no wagering advice. The same flow also accepts a temporary CSV.” | Cyan box around simulated-data label; subtitle: `Predefined data for a reliable demo · CSV supported`. |
 | 3 | 0:30–0:46 | Upload control briefly; then select `Global regions`, type question. | “An analyst can upload a CSV of up to 200 rows, or use a prepared scenario. I’ll ask: Which region drove post-tournament growth? There is no chart picker.” | Cursor halo on upload, then question field. |
 | 4 | 0:46–1:04 | Click Generate. Capture until `1 Analyze data` / `2 Generate code`; freeze if necessary. | “Codex accelerated the build from the tested prototype into this Next.js app, scene runtime, and repair loop. Now GPT-5.6 Terra receives the current data and question, then writes the finding, visual plan, and scene code.” | Pause the clip while waiting. Circle top-left trace. On-screen: `Codex built the runtime; GPT-5.6 generates this live scene`. |
 | 5 | 1:04–1:26 | Resume at live scene. Let automatic camera motion, focus ring, labels play. | “The model does not return a chart image. It returns a runnable scene. Numeric labels preserve the evidence; the camera push and gold focus tell the viewer what changed and where to look.” | Let scene move for 8 seconds. Box decision brief; then box one numeric label. |
 | 6 | 1:26–1:40 | Drag orbit, scroll zoom, right-drag pan. | “The reveal is directed, but the scene remains explorable. A teammate can orbit, zoom, and pan instead of trusting a fixed screenshot.” | Cursor trail; subtitle: `Directed first view · manual inspection second`. |
 | 7 | 1:40–1:57 | Open `View GPT-generated scene code → browser runtime`; show timestamp, visual direction. | “This is the proof that it is live: the timestamp, public visual direction, and generated code are in the product. We show the result, not private chain-of-thought.” | Highlight timestamp → code disclosure → `Run scene` trace. |
-| 8 | 1:57–2:16 | Switch focus to markets and ask a different question; cut loading wait, reveal different scene. | “Same dataset, new question: Which market accelerated during knockouts? GPT selects a new story and writes a new scene. This is not a prerecorded animation.” | Hard cut on click; reveal with a gold callout on new focus. |
+| 8 | 1:57–2:16 | Switch focus to markets and ask a different question; cut loading wait, reveal different scene. | “Same dataset, new question: Which engagement channel accelerated during knockouts? GPT selects a new story and writes a new scene. This is not a prerecorded animation.” | Hard cut on click; reveal with a gold callout on new focus. |
 | 9 | 2:16–2:34 | Architecture diagram. | “One Vercel app keeps the OpenAI key on the server. CSV input is temporary. The browser runs a constrained three.js contract, and a runtime error goes back to GPT for up to three repairs.” | Ken Burns left-to-right across architecture then sequence diagram. |
-| 10 | 2:34–2:49 | Proof card: `2 scenarios · 104 matches · 4 World Cup views · 200-row CSV limit · 3 repairs`. | “In one deployable MVP: two business scenarios, four analyst views, bounded CSV input, visible live generation, and a three-attempt repair loop.” | Animate numbers one at a time; sound-off readable. |
+| 10 | 2:34–2:49 | Proof card: `2 scenarios · 104 matches · 4 Global Football Tournament views · 200-row CSV limit · 3 repairs`. | “In one deployable MVP: two business scenarios, four analyst views, bounded CSV input, visible live generation, and a three-attempt repair loop.” | Animate numbers one at a time; sound-off readable. |
 | 11 | 2:49–2:58 | Closing card with product, production URL, GitHub URL. | “InsightMotion: ask data, let GPT direct attention, and share a decision — not a stale screenshot.” | Hold links 9 seconds. |
 
 ## Voiceover — read at 135–145 words per minute
@@ -28,8 +28,8 @@ AI-directed 3D brief that tells a team where to look.**
 > InsightMotion changes the deliverable itself. It turns a business question
 > into a live, AI-directed 3D decision brief.
 >
-> This demo uses simulated aggregate World Cup operations data: 104 matches,
-> no individual users, and no betting advice. Analysts can also upload a
+> This demo uses simulated aggregate tournament engagement data: 104 matches,
+> no personal data, and no wagering advice. Analysts can also upload a
 > temporary CSV, up to 200 rows, used only for the current request.
 >
 > I select global regions and ask a normal question: which region drove
@@ -58,7 +58,7 @@ AI-directed 3D brief that tells a team where to look.**
 > contract, and if generated code fails at runtime, InsightMotion sends the
 > error and prior code back for up to three repairs.
 >
-> In one deployable MVP, we built two business scenarios, four World Cup views,
+> In one deployable MVP, we built two business scenarios, four analyst views,
 > bounded CSV input, visible live generation, and an attention-directed 3D
 > brief. InsightMotion: ask data, let GPT direct attention, and share a
 > decision — not a stale screenshot.

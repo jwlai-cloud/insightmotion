@@ -1,7 +1,7 @@
 # InsightMotion
 
 InsightMotion turns a performance-data question into a shareable, animated
-decision brief. GPT-5.6 Terra reads simulated World Cup operations or retail data, produces a concise
+decision brief. GPT-5.6 Terra reads simulated global football tournament engagement operations or retail data, produces a concise
 finding and caption, then writes the three.js/anime.js scene code that the
 browser runs live.
 
@@ -55,8 +55,8 @@ generate the snapshot.
 InsightMotion was built as a close product-and-engineering collaboration with
 Codex. The human product lead set the target: a credible Work & Productivity
 tool, a short demo with a visible live-AI moment, and a deliberately bounded
-one-day MVP. They chose the two repeatable simulated scenarios, the World Cup
-operations opening story, the dark presentation style, the manual 3D
+one-day MVP. They chose the two repeatable simulated scenarios, the global football tournament
+engagement operations opening story, the dark presentation style, the manual 3D
 inspection controls, and the privacy and cost boundaries.
 
 Codex accelerated the workflow from the supplied prototype and written spec:
@@ -76,6 +76,43 @@ server keeps `OPENAI_API_KEY` private and can ask the model to repair a failed
 scene up to three times. This makes GPT-5.6 responsible for the question-specific
 insight and visual story, while Codex was the coding collaborator that helped
 turn the concept into a working product.
+
+## How we built it with Codex
+
+InsightMotion was built collaboratively with Codex across the whole lifecycle —
+spec, implementation, three.js integration, verification, and submission assets.
+The dated commit history is the evidence trail.
+
+**Where Codex accelerated the work**
+
+- **MVP scaffold** (`ba51bd5`): Codex turned the spec into the first working
+  Next.js + server-side `/api/generate` loop and the three.js runtime contract.
+- **Live-generation trace + preview capture** (`3f17041`): Codex added the
+  visible `Analyze → Generate → Run` pipeline and the recording-friendly preview
+  mode without loosening the production gate.
+- **Ephemeral CSV input** (`cab6b46`): Codex implemented the in-browser CSV
+  parser with the 200-row / 20-column bounds and the "never stored" guarantee.
+- **Scene controls + submission assets** (`23ab957`): OrbitControls (orbit/zoom/
+  pan) plus the diagrams and demo runbook.
+- **Demo access bypass + video pipeline** (`bb338ab`, `242838e`): the env-gated
+  judge-access switch and the 1080p ffmpeg assembly script.
+
+**Where we made the key decisions**
+
+- *Product:* the deliverable is a directed 3D decision brief, not a chart image —
+  motion only earns its place when it answers "where should I look?".
+- *Engineering:* keep `OPENAI_API_KEY` server-side; constrain generated code to a
+  fixed `(scene, camera, THREE, anime)` contract; on runtime failure, feed the
+  error + prior code back to the model for up to three repairs.
+- *Design/safety:* simulated aggregate data only, in-frame numeric labels to
+  preserve evidence, and a first-4-seconds camera/focus cue.
+
+**How GPT-5.6 and Codex contributed to the result**
+
+GPT-5.6 Terra is the runtime engine — it reads the data + question and returns
+the finding, public visual plan, and executable scene code live per request.
+Codex was the build engine — it produced and iterated the app, the repair loop,
+and the capture pipeline that turn that live generation into a shareable brief.
 
 ## Build
 

@@ -1,6 +1,6 @@
 A team receives a CSV, chooses a chart, and still has to explain where everyone should look. That explanation is usually a stale screenshot. InsightMotion changes the deliverable itself. It turns a business question into a live, AI-directed 3D decision brief.
 
-This demo uses simulated aggregate World Cup operations data: one hundred and four matches, no individual users, and no betting advice. Analysts can also upload a temporary CSV, up to two hundred rows, used only for the current request.
+This demo uses simulated aggregate tournament engagement data: one hundred and four matches, no personal data, and no wagering advice. Analysts can also upload a temporary CSV, up to two hundred rows, used only for the current request.
 
 I select global regions and ask a normal question: which region drove post-tournament growth? Notice what I do not do: I never choose a chart.
 

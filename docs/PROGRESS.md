@@ -4,7 +4,7 @@
 
 - Created spec-driven MVP scope and architecture decision record.
 - Built Next.js App Router frontend, server-only access/generation routes, and
-  two static simulated datasets: World Cup 2026 post-tournament operations
+  two static simulated datasets: Global Football Tournament 2026 post-event engagement operations
   review plus retail sales.
 - Ported execution contract, fence stripping, stale-update reset, render loop,
   and three-attempt runtime repair logic from provided prototype.
