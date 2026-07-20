@@ -43,8 +43,8 @@ create the explanation *and* choreograph the viewer’s attention in real time.
   rows / 20 columns, sent only with the current generation request, and never
   persisted.
 - **Cost control:** `OPENAI_API_KEY` stays server-side. A signed, HTTP-only
-  demo session protects production; an explicitly Preview-only switch supports
-  truthful recording without exposing the public demo gate.
+  demo session protects normal use; a deliberately temporary environment
+  override can support truthful recording and must be removed after capture.
 
 ## Built with Codex and GPT-5.6
 

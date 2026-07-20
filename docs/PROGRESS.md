@@ -15,15 +15,17 @@
 - Added optional ephemeral CSV upload (200 rows, 20 columns; no persistence), Preview capture bypass, visible generation trace, and direct 3D orbit/zoom/pan controls.
 - Added Devpost story, Mermaid architecture/topology/sequence diagrams, and
   exact 180-second demo script + recording/edit runbook.
+- Deployed InsightMotion to Vercel, produced a 180-second 1080p captioned demo
+  export, and prepared the Devpost draft with the public repository and live
+  app links.
 
 ## Next
 
-1. Set real environment values in `.env.local` and perform one live OpenAI
-   generation / visual browser pass.
-2. Deploy to Vercel, configure production environment values, and record public
-   URL.
-3. Capture three-minute demo video using `docs/submission/DEMO-VIDEO.md`, then
-   add deployment/video/repository URLs to `docs/submission/DEVPOST.md`.
+1. Publish the reviewed 180-second demo video to YouTube or Vimeo and add its
+   public URL to the Devpost draft.
+2. Add the required `/feedback` Codex session ID and final submission fields
+   (submitter type, country, and Work & Productivity track), then submit.
+3. Remove any temporary `DEMO_ACCESS_BYPASS` setting after recording.
 
 ## Open questions
 

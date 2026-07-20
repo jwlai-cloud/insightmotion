@@ -67,9 +67,11 @@ AI-directed 3D brief that tells a team where to look.**
 
 ## Capture protocol
 
-1. Wait for the `dev` Vercel Preview to include the latest scene-control commit.
-   Configure Preview only: `OPENAI_API_KEY` and
-   `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true`. Production never uses the bypass.
+1. Use an isolated recording deployment with the latest scene-control commit.
+   Configure `OPENAI_API_KEY` plus `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` for
+   Preview, or the explicitly temporary `DEMO_ACCESS_BYPASS=true` if a
+   controlled production capture is necessary. Remove the override immediately
+   after recording.
 2. Record each shot as a separate 1080p, 30fps clip. Keep 2 seconds of clean
    buffer at both ends. Hide notifications, keys, bookmarks, and other tabs.
 3. For each model call, record the click and visible trace. Stop capture while
