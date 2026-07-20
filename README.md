@@ -19,6 +19,9 @@ Set these values in `.env.local`:
 OPENAI_API_KEY=...
 DEMO_ACCESS_CODE=...
 DEMO_SESSION_SECRET=long-random-string
+
+# Only for a Vercel Preview deployment while recording; do not set in Production.
+BEFORE_YOU_BELIEVE_DEMO_BYPASS=true
 ```
 
 Open `http://localhost:3000`, enter the demo code, ask a sales question, and
@@ -52,6 +55,6 @@ npm run build
 
 ## Deployment
 
-Deploy as a single Vercel project. Set the same three environment variables in
-Vercel Project Settings before deploying. Full command steps are in the final
-handoff and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+Deploy as a single Vercel project. Set the three required variables in Vercel Project Settings before deploying.
+For a recording-only Preview deployment, add `BEFORE_YOU_BELIEVE_DEMO_BYPASS=true` to
+the Preview environment only; it never bypasses the production judge gate. Full command steps are in the final handoff and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
