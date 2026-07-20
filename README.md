@@ -21,7 +21,7 @@ DEMO_ACCESS_CODE=...
 DEMO_SESSION_SECRET=long-random-string
 
 # Only for a Vercel Preview deployment while recording; do not set in Production.
-BEFORE_YOU_BELIEVE_DEMO_BYPASS=true
+BEFORE_YOU_BELIEVE_DEMO_BYPASS=false
 ```
 
 Open `http://localhost:3000`, enter the demo code, ask a sales question, and

@@ -9,7 +9,7 @@ brief—not another stale dashboard screenshot.**
 
 | # | Time | Source | On screen | Narration / text | Technique |
 |---|---|---|---|---|---|
-| 1 | 0:00–0:12 | Title card | “Dashboard screenshots go stale.” | “A screenshot says what was true when someone exported it. It does not tell the next person where to look.” | Fade in. Show static chart crossed out. |
+| 1 | 0:00–0:12 | Title card | “A CSV is not a decision.” | “Teams get a CSV, then still have to choose the chart and explain where to look. InsightMotion does both live.” | Fade in. Show CSV becoming an animated 3D brief. |
 | 2 | 0:12–0:26 | Browser | InsightMotion World Cup scenario; 104-match label. | “InsightMotion is an internal analytics brief for a post-tournament World Cup review.” | Slow zoom into scenario title. |
 | 3 | 0:26–0:42 | Browser | Select Global regions; question: “Which region drove post-tournament growth?” | “An analyst asks a normal business question. No chart type is chosen up front.” | Cursor highlight on question. |
 | 4 | 0:42–0:57 | Browser, paused capture | Click Generate; visible “Analyze data → Generate code → Run scene” trace; generated-code section opens. | “GPT-5.6 Terra receives selected simulated aggregate data. It writes the finding, public visual direction, caption, and three.js/anime.js scene code.” | Freeze during wait. Circle the live trace, then reveal the code disclosure. Overlay: “Live GPT generation — cut wait time.” |

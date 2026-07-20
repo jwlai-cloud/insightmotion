@@ -11,7 +11,7 @@ JavaScript in a three.js/anime.js scene.
 
 ## Acceptance criteria
 
-- [ ] `npm run dev` shows a page with: a scenario picker (World Cup 2026 post-tournament review first; retail sales as a second simulated scenario), a context-aware highlight selector, question box, and Generate button
+- [ ] `npm run dev` shows a page with: a scenario picker (World Cup 2026 post-tournament review first; retail sales as a second simulated scenario), an optional ephemeral CSV uploader limited to 200 data rows, a context-aware highlight selector, question box, and Generate button
 - [ ] Generate calls `/api/generate`, which calls GPT-5.6 server-side (key never exposed to client) and returns working code + caption
 - [ ] The returned code renders in a three.js/anime.js scene with no visible flicker/crash; if the generated code throws, the existing auto-repair retry logic (from the sketch-to-3D prototype) kicks in, up to 3 attempts
 - [ ] The camera or highlight animation visibly draws attention to the selected region — this must be demo-visible, not just implemented
@@ -80,6 +80,7 @@ an account system.
 
 ### Data and URL behavior
 
+- Keep the two shipped datasets as the default demo data. Add an optional CSV upload that is parsed in-browser, limited to 200 data rows and 20 columns, sent only with the current generation request, and never stored.
 - Add `data/retail-sales.json` and `data/world-cup-2026-review.json` as valid
   JSON with `_comment` fields clearly labeling contents as simulated data
   (JSON has no native comments).
