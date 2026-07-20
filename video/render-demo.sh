@@ -26,7 +26,17 @@ card video/cards/10-proof.mp4 15 "2 scenarios · 104 matches · 4 views" "200-ro
 card video/cards/11-close.mp4 11 "Ask data. Let GPT direct attention." "insightmotion-git-dev-jwlaiclouds-projects.vercel.app  ·  github.com/jwlai-cloud/insightmotion"
 
 for name in 02-context 03-question 04-generation 05-reveal 06-controls 07-code-proof 08-second-question 09-architecture; do
-  ffmpeg -y -i "video/raw/${name}.mp4" -vf "scale=1920:1080,fps=30" -c:v libx264 -pix_fmt yuv420p -an "video/normalized/${name}.mp4"
+  case "$name" in
+    02-context) duration=15 ;;
+    03-question) duration=16 ;;
+    04-generation) duration=18 ;;
+    05-reveal) duration=22 ;;
+    06-controls) duration=14 ;;
+    07-code-proof) duration=17 ;;
+    08-second-question) duration=19 ;;
+    09-architecture) duration=18 ;;
+  esac
+  ffmpeg -y -i "video/raw/${name}.mp4" -t "$duration" -vf "scale=1920:1080,fps=30" -c:v libx264 -pix_fmt yuv420p -an "video/normalized/${name}.mp4"
 done
 
 cat > video/normalized/concat.txt <<'EOF'
