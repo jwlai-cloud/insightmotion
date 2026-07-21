@@ -27,6 +27,7 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
     controls.target.copy(defaultControlsTarget); controls.enableDamping = true; controls.dampingFactor = 0.06; controls.minDistance = 2.5; controls.maxDistance = 14; controls.update();
     const clock = new THREE.Clock();
     let sceneUpdate: ((seconds: number) => void) | null = null;
+    let sceneUpdateErrors = 0;
     let introEndTime = 0;
 
     const resetScene = () => {
@@ -57,7 +58,8 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
     const loop = () => {
       frame = requestAnimationFrame(loop);
       if (sceneUpdate) {
-        try { sceneUpdate(clock.getElapsedTime()); } catch { /* preserve visible scene on animation error */ }
+        try { sceneUpdate(clock.getElapsedTime()); sceneUpdateErrors = 0; }
+        catch { if (++sceneUpdateErrors >= 30) sceneUpdate = null; } // M4: stop a per-frame throw storm
       }
       if (!controls.enabled && clock.getElapsedTime() >= introEndTime) {
         controls.enabled = true;
@@ -72,12 +74,24 @@ export function SnapshotStage({ controllerRef }: { controllerRef: MutableRefObje
       run(code) {
         resetScene();
         window.__sceneUpdate = undefined;
-        const fn = new Function("scene", "camera", "THREE", "anime", code);
+        // C1: shadow network sinks inside the generated scope (defense in depth).
+        // The real network block is CSP `connect-src 'self'` (next.config.ts), which
+        // stops exfil even via window.fetch. ponytail: full isolation would run this
+        // in a sandboxed iframe / Worker with OffscreenCanvas — upgrade path if an
+        // untrusted model ever runs against real user data.
+        const fn = new Function(
+          "scene", "camera", "THREE", "anime",
+          "fetch", "XMLHttpRequest", "WebSocket", "EventSource", "Request", "importScripts",
+          code,
+        );
         controls.enabled = false;
         introEndTime = clock.getElapsedTime() + 4;
         try {
-          fn(scene, camera, THREE, anime);
+          // ponytail: a synchronous infinite loop in generated code still freezes the
+          // tab; only a Worker can interrupt that. Accepted for a trusted-model demo.
+          fn(scene, camera, THREE, anime, undefined, undefined, undefined, undefined, undefined, undefined);
           sceneUpdate = typeof window.__sceneUpdate === "function" ? window.__sceneUpdate : null;
+          sceneUpdateErrors = 0;
         } catch (error) {
           controls.enabled = true;
           throw error;
